@@ -24,6 +24,7 @@ public class Startup
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IAuthUserService, AuthService>();
 
 
         // Add services to the container.
