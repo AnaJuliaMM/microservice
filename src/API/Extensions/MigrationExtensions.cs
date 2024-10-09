@@ -1,7 +1,7 @@
+using AuthMicroservice.src.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using UserAuthAPI.Data;
 
-namespace UserAuthAPI.Extensions;
+namespace AuthMicroservice.src.API.Extensions;
 
 public static class MigrationExtensions
 {

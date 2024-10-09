@@ -1,8 +1,10 @@
+using AuthMicroservice.src.API.DTOs;
+using AuthMicroservice.src.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using UserAuthAPI.DTOs;
-using UserAuthAPI.Services;
 
-namespace UserAuthAPI.Controllers
+
+
+namespace AuthMicroservice.src.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

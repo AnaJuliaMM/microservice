@@ -1,7 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using UserAuthAPI.Models;
+using AuthMicroservice.src.Domain.Entities;
+using AuthMicroservice.src.Infrastructure.Data;
+using AuthMicroservice.src.Domain.Interfaces;
 
-namespace UserAuthAPI.Data
+
+namespace AuthMicroservice.src.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {

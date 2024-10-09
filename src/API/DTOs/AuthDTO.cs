@@ -1,4 +1,4 @@
-namespace UserAuthAPI.DTOs
+namespace AuthMicroservice.src.API.DTOs
 {
     public class AuthDTO
     {

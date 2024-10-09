@@ -1,9 +1,10 @@
-using UserAuthAPI.Data;
-using UserAuthAPI.DTOs;
-using UserAuthAPI.Models;
-using UserAuthAPI.Helpers;
+using AuthMicroservice.src.Application.Interfaces;
+using AuthMicroservice.src.Domain.Interfaces;
+using AuthMicroservice.src.Domain.Entities;
+using AuthMicroservice.src.Application.Helpers;
+using AuthMicroservice.src.API.DTOs;
 
-namespace UserAuthAPI.Services
+namespace AuthMicroservice.src.Application.Services
 {
     public class UserService : IUserService
     {

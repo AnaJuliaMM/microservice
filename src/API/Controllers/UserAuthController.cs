@@ -1,16 +1,16 @@
+using AuthMicroservice.src.API.DTOs;
+using AuthMicroservice.src.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using UserAuthAPI.DTOs;
-using UserAuthAPI.Services;
 
-namespace UserAuthAPI.Controllers
+
+namespace AuthMicroservice.src.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly IAuthUserService _authService;
-        private ILogger<AuthController> _logger;
+        private readonly ILogger<AuthController> _logger;
 
         public AuthController(IAuthUserService authService, ILogger<AuthController> logger)
         {

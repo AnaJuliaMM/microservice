@@ -1,4 +1,4 @@
-namespace UserAuthAPI.Models
+namespace AuthMicroservice.src.Domain.Entities
 {
     public class User
     {

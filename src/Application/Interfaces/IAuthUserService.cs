@@ -1,6 +1,8 @@
-using UserAuthAPI.DTOs;
 
-namespace UserAuthAPI.Services
+
+using AuthMicroservice.src.API.DTOs;
+
+namespace AuthMicroservice.src.Application.Interfaces
 {
     public interface IAuthUserService
     {

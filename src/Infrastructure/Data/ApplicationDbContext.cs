@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using UserAuthAPI.Models;
+using AuthMicroservice.src.Domain.Entities;
 
-namespace UserAuthAPI.Data
+namespace AuthMicroservice.src.Infrastructure.Data
 {
     public class ApplicationDbContext : DbContext
     {

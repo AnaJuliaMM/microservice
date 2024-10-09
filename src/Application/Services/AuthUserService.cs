@@ -1,10 +1,10 @@
-using System.Threading.Tasks;
-using UserAuthAPI.DTOs;
-using UserAuthAPI.Data;
-using UserAuthAPI.Helpers;
-using UserAuthAPI.Models;
+using AuthMicroservice.src.Application.Interfaces;
+using AuthMicroservice.src.Domain.Interfaces;
+using AuthMicroservice.src.Domain.Entities;
+using AuthMicroservice.src.Application.Helpers;
+using AuthMicroservice.src.API.DTOs;
 
-namespace UserAuthAPI.Services
+namespace AuthMicroservice.src.Application.Services
 {
 
     public class AuthService : IAuthUserService

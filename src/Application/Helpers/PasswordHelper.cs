@@ -1,19 +1,16 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace UserAuthAPI.Helpers
+namespace AuthMicroservice.src.Application.Helpers
 {
 
     public class PasswordHelper
     {
         public static string HashPassword(string password)
         {
-            using (var sha256 = SHA256.Create())
-            {
-                byte[] bytes = Encoding.UTF8.GetBytes(password);
-                byte[] hash = sha256.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
-            }
+            byte[] bytes = Encoding.UTF8.GetBytes(password);
+            byte[] hash = SHA256.HashData(bytes);
+            return Convert.ToBase64String(hash);
         }
 
         public static bool VerifyPassword(string enteredPassword, string storedHash)

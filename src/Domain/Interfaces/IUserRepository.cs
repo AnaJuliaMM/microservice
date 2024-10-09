@@ -1,6 +1,6 @@
-using UserAuthAPI.Models;
+using AuthMicroservice.src.Domain.Entities;
 
-namespace UserAuthAPI.Data
+namespace AuthMicroservice.src.Domain.Interfaces
 {
     public interface IUserRepository
     {
