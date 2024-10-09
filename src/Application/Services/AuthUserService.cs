@@ -16,21 +16,17 @@ namespace AuthMicroservice.src.Application.Services
             _userRepository = userRepository;
         }
 
-        public async Task<bool> Authenticate(AuthDTO authDTO)
+        public async Task<User?> Authenticate(AuthDTO authDTO)
         {
             // Verifica se o usuário existe
             User user = await _userRepository.GetUserByEmail(authDTO.Email);
 
             if (user == null)
-            {
-                return false; 
-            }
-
-            string enteredPassword = authDTO.Password;
-            string storedHash = user.Password;
+                return user; 
             
-            return PasswordHelper.VerifyPassword(enteredPassword, storedHash );
-
+            if (PasswordHelper.VerifyPassword(authDTO.Password, user.Password))
+                return user;
+            return null;
             
         }
     }

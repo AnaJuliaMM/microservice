@@ -1,5 +1,7 @@
 using AuthMicroservice.src.API.DTOs;
+using AuthMicroservice.src.Application.Helpers;
 using AuthMicroservice.src.Application.Interfaces;
+using AuthMicroservice.src.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -22,15 +24,15 @@ namespace AuthMicroservice.src.API.Controllers
         public async Task<IActionResult> Login(AuthDTO authDTO)
         {
             _logger.LogDebug("Chamando Autenticação");
-            var isAuthenticated = await _authService.Authenticate(authDTO);
-
+            User user = await _authService.Authenticate(authDTO);
+            Console.WriteLine(user);
             
-            if (!isAuthenticated)
+            if (user == null)
             {
                 return Unauthorized("Invalid credentials");
             }
 
-            return Ok("Authentication successful");
+            return Ok(TokenHelper.tokenize(authDTO.Email));
         }
     }
 }

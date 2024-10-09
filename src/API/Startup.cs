@@ -36,12 +36,6 @@ public class Startup
         services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "User Authentication API", Version = "v1" });
-            // c.SwaggerDoc("v1", new OpenApiInfo { Title = "User Authentication API", Version = "v1" });
-
-            // Se você tiver um arquivo de comentários XML
-            // var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-            // var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-            // c.IncludeXmlComments(xmlPath);
         });
 
         // Add Authentication
